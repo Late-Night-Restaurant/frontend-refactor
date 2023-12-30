@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="signupAgreeViewModel"
+            type="com.example.simya.src.ui.viewmodel.login.signup.SignupViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_signup_agree_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_signup_main_headline1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_32"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_32"
+                android:text="@string/app_name"
+                android:textColor="@color/Primary_01"
+                android:textSize="@dimen/text_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_signup_main_headline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:layout_marginTop="@dimen/margin_40"
+                android:text="@string/signup_title1"
+                android:textColor="@color/Gray_06"
+                android:textSize="@dimen/text_18"
+                app:layout_constraintStart_toEndOf="@+id/tv_signup_main_headline1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_signup_main_headline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_32"
+                android:layout_marginTop="@dimen/margin_8"
+                android:text="@string/signup_title2"
+                android:textColor="@color/Gray_06"
+                android:textSize="@dimen/text_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_signup_main_headline1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--    체크박스-->
+
+        <LinearLayout
+            android:id="@+id/ll_check_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_layout_margin"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btn_signup_agree_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:context=".src.ui.view.chat.ChatActivity"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_check_box_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_layout_margin"
+                android:layout_marginRight="@dimen/default_layout_margin"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/included_default"
+                tools:context=".src.ui.view.login.signup.SignupActivity"
+                tools:ignore="MissingConstraints">
+
+                <CheckBox
+                    android:id="@+id/cb_signup_agree_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:checked="@={signupAgreeViewModel.agreeAll}"
+                    />
+                <TextView
+                    android:id="@+id/tv_signup_tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:text="@string/signup_agree1"
+                    android:textSize="@dimen/text_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cb_signup_agree_all"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_check_box_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_layout_margin"
+                android:layout_marginRight="@dimen/default_layout_margin"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/included_default"
+                tools:context=".src.ui.view.login.signup.SignupActivity"
+                tools:ignore="MissingConstraints">
+
+
+                <CheckBox
+                    android:id="@+id/cb_signup_agree_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:checked="@={signupAgreeViewModel.agreeService}"/>
+
+                <TextView
+                    android:id="@+id/tv_signup_tv_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_layout_margin"
+                    android:text="@string/signup_agree2"
+                    android:textSize="@dimen/text_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cb_signup_agree_service"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_signup_tv_service2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/default_layout_margin"
+                    android:text="@string/signup_essential"
+                    android:textSize="@dimen/text_15"
+                    android:textColor="@color/Primary_01"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_signup_tv_service"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_signup_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@android:color/transparent"
+                    android:text="@string/signup_watch"
+                    android:textSize="@dimen/text_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_check_box_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_layout_margin"
+                android:layout_marginRight="@dimen/default_layout_margin"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/included_default"
+                tools:context=".src.ui.view.login.signup.SignupActivity"
+                tools:ignore="MissingConstraints">
+
+
+                <CheckBox
+                    android:id="@+id/cb_signup_agree_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:checked="@={signupAgreeViewModel.agreeInfo}" />
+
+
+                <TextView
+                    android:id="@+id/tv_signup_tv_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:text="@string/signup_agree3"
+                    android:textSize="@dimen/text_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cb_signup_agree_info"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_signup_tv_info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:text="@string/signup_essential"
+                    android:textSize="@dimen/text_15"
+                    android:textColor="@color/Primary_01"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_signup_tv_info"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <Button
+                    android:id="@+id/btn_signup_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@android:color/transparent"
+                    android:text="@string/signup_watch"
+                    android:textSize="@dimen/text_15"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <!--    다음 버튼-->
+        <Button
+            android:id="@+id/btn_signup_agree_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/low_radius_button"
+            android:layout_marginBottom="@dimen/button_margin"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_marginRight="@dimen/button_margin"
+            android:textColor="@color/Gray_03"
+            android:textSize="@dimen/text_15"
+            android:text="@string/signup_button_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:enabled="false"
+            android:clickable="false">
+
+        </Button>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

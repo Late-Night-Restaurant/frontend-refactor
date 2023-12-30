@@ -1,0 +1,33 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Simya" parent="Theme.AppCompat.NoActionBar">
+        <!-- Primary brand color. -->
+<!--        <item name="colorPrimary">@color/purple_500</item>-->
+<!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
+<!--        <item name="colorOnPrimary">@color/white</item>-->
+<!--        &lt;!&ndash; Secondary brand color. &ndash;&gt;-->
+<!--        <item name="colorSecondary">@color/teal_200</item>-->
+<!--        <item name="colorSecondaryVariant">@color/teal_700</item>-->
+<!--        <item name="colorOnSecondary">@color/black</item>-->
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+<!--        Customize your theme here. -->
+        <item name="android:windowBackground">@color/Gray_11</item>
+<!--        TextInputEditText hint -->
+        <item name="android:textColorHint">@color/Gray_08</item>
+        <item name="hintTextColor">@color/Primary_01</item>
+        <item name="colorAccent">@color/Primary_01</item>
+        <item name="colorError">@color/Error</item>
+
+<!--    ShapeImageView-->
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize12Percent" parent="">
+        <item name="cornerSize">12dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize24Percent" parent="">
+        <item name="cornerSize">24dp</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+</resources>

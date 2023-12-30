@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--    인터넷 권한-->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--    갤러리 권한-->
+<!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+<!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <!--    카메라 권한-->
+    <uses-permission android:name="android.permission.CAMERA" />
+<!--    android:name="com.example.simya.util.sharedpreferences.Shared"-->
+    <application
+        android:name=".config.ApplicationClass"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_simya"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_simya_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Simya"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".src.ui.view.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".src.ui.view.login.LoginActivity"
+            android:exported="true">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value=""/>
+
+        </activity>
+
+        <activity
+            android:name=".src.ui.view.login.signIn.EmailLoginActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".src.ui.view.login.signup.SignupActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".src.ui.view.home.HomeActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".src.ui.view.mypage.MyReviewActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".src.ui.view.story.StoryReviewActivity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".src.ui.view.story.StoryIntroActivity"
+            android:exported="true" />
+
+        <activity android:name=".src.ui.view.story.CreateMyStoryActivity"
+            android:exported="true">
+
+
+        </activity>
+        <activity
+            android:name=".src.ui.view.story.OpenMyStoryFragment"
+            android:exported="true" >
+
+
+        </activity>
+        <activity
+            android:name=".src.ui.view.mypage.ProfileEditActivity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".src.ui.view.mypage.MyPageLikeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".src.ui.view.mypage.MyPageReviewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".src.ui.view.story.StoryLikeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".src.ui.view.story.OpenMyStoryActivity"
+            android:exported="true" >
+
+        </activity>
+<!--        <activity-->
+<!--            android:name=".src.main.story.EditMyStoryMenuActivity"-->
+<!--            android:exported="true" />-->
+        <activity
+            android:name=".src.ui.view.chat.ChatActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".src.ui.view.story.TodayMenuActivity"
+            android:exported="true" />
+        <activity android:name=".src.ui.view.mypage.ProfileAddActivity"
+            android:exported="true"/>
+        <activity android:name=".src.ui.view.mypage.ProfileModifyActivity"
+            android:exported="true"/>
+        <activity android:name=".src.ui.view.prepare.PrepareActivity"
+            android:exported="true"/>
+        <activity android:name=".src.ui.view.gallery.GalleryActivity"
+            android:exported="true">
+
+        </activity>
+    </application>
+
+</manifest>

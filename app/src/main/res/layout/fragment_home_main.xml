@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb_home_main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:layout_width="@dimen/icon_width"
+                android:layout_height="@dimen/icon_height"
+                android:background="@color/Colorless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_bell_no" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/Primary_01"
+                android:textSize="@dimen/text_28"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="@dimen/icon_width"
+                android:layout_height="@dimen/icon_height"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:background="@color/Colorless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_search" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/ll_home_main_sort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_8"
+            android:gravity="end"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tb_home_main_toolbar">
+
+            <TextView
+                android:id="@+id/tv_home_main_sort_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_main_customer_order" />
+
+            <ImageButton
+                android:id="@+id/ib_home_main_sort_type"
+                android:layout_width="@dimen/icon_width"
+                android:layout_height="@dimen/icon_height"
+                android:background="@color/Colorless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_down" />
+
+            <ImageButton
+                android:id="@+id/ib_home_main_view_type"
+                android:layout_width="@dimen/icon_width"
+                android:layout_height="@dimen/icon_height"
+                android:background="@color/Colorless"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_box_4" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fm_home_main"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_zero"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_home_main_sort" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

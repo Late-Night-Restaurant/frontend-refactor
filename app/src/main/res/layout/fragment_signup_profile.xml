@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="signupViewModel"
+            type="com.example.simya.src.ui.viewmodel.login.signup.SignupViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--    안내 멘트-->
+        <TextView
+            android:id="@+id/tv_signup_profile_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_32"
+            android:text="@string/signup_profile_title1"
+            android:textColor="@color/Gray_06"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+        <TextView
+            android:id="@+id/tv_signup_profile_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="@string/signup_profile_title2"
+            android:textColor="@color/Gray_06"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_signup_profile_1" />
+        <!--    프로필 설정-->
+        <LinearLayout
+            android:id="@+id/ll_signup_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_signup_profile_2">
+            <!--        프로필 사진-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_profile_signup_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                tools:ignore="MissingConstraints">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civ_signup_input_profile"
+                        android:layout_width="@dimen/signup_profile_size"
+                        android:layout_height="@dimen/signup_profile_size"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_base_profile"
+                        android:background="@drawable/bg_profile"
+                        />
+                    <ImageButton
+                        android:id="@+id/ib_signup_profile_edit"
+                        android:layout_width="@dimen/signup_profile_edit_button_size"
+                        android:layout_height="@dimen/signup_profile_edit_button_size"
+                        android:src="@drawable/ic_edit_on_l"
+                        android:scaleType="fitCenter"
+                        android:background="@color/Colorless"
+                        android:layout_alignBottom="@+id/civ_signup_input_profile"
+                        android:layout_alignEnd="@+id/civ_signup_input_profile"/>
+                </RelativeLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--        닉네임 입력창-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_signup_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:errorEnabled="true"
+                app:hintEnabled="false">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signup_profile_nick"
+                    android:textColor="@color/Gray_04"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_nickname_signup_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:errorEnabled="true"
+                app:hintEnabled="false">
+                <EditText
+                    android:id="@+id/et_nickname_signup_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_profile_nick_hint"
+                    android:inputType="text"
+                    android:backgroundTint="@color/Gray_06"
+                    android:text="@={signupViewModel.nickname}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_signup_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:errorEnabled="true"
+                app:hintEnabled="false">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signup_profile_intro"
+                    android:textColor="@color/Gray_04"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_comment_signup_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:errorEnabled="true"
+                app:hintEnabled="false">
+                <EditText
+                    android:id="@+id/et_comment_signup_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/signup_profile_intro_hint"
+                    android:inputType="text"
+                    android:backgroundTint="@color/Gray_06"
+                    android:text="@={signupViewModel.comment}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <!--    다음 버튼-->
+        <Button
+            android:id="@+id/btn_signup_profile_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/low_radius_button"
+            android:layout_marginBottom="@dimen/button_margin"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_marginRight="@dimen/button_margin"
+            android:textColor="@color/Gray_03"
+            android:textSize="@dimen/text_15"
+            android:text="@string/signup_button_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:clickable="false"
+            android:enabled="false"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

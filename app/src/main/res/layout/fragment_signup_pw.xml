@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="signupViewModel"
+            type="com.example.simya.src.ui.viewmodel.login.signup.SignupViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--    안내 멘트-->
+        <TextView
+            android:id="@+id/tv_signup_pw_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_32"
+            android:text="@string/signup_pw_title1"
+            android:textColor="@color/Gray_06"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_signup_pw_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_32"
+            android:layout_marginTop="@dimen/margin_8"
+            android:text="@string/signup_pw_title2"
+            android:textColor="@color/Gray_06"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_signup_pw_1" />
+
+        <!--    비밀번호 입력 창-->
+        <LinearLayout
+            android:id="@+id/ll_signup_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_32"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_signup_pw_2">
+            <!--        비밀번호 입력창-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_pw_signup_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:layout_marginBottom="@dimen/margin_16"
+                app:errorEnabled="true"
+                app:hintEnabled="false"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/tiet_pw_signup_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/Gray_06"
+                    android:hint="@string/signup_pw_input_hint"
+                    android:inputType="textPassword"
+                    android:autofillHints=""
+                    android:text="@={signupViewModel.pw}"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_re_pw_signup_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_16"
+                android:layout_marginEnd="@dimen/margin_16"
+                app:errorEnabled="true"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/et_re_pw_signup_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/Gray_06"
+                    android:hint="@string/signup_pw_input_re_hint"
+                    android:inputType="textPassword"
+                    android:text="@={signupViewModel.rePw}">
+                </EditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <!--    다음 버튼-->
+        <Button
+            android:id="@+id/btn_signup_next_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/low_radius_button"
+            android:layout_marginBottom="@dimen/button_margin"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_marginRight="@dimen/button_margin"
+            android:textColor="@color/Gray_03"
+            android:textSize="@dimen/text_15"
+            android:text="@string/signup_button_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:enabled="false"
+            android:clickable="false">
+
+        </Button>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
