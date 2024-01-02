@@ -1,28 +1,10 @@
 package com.example.simya.src.ui.view.mypage
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.example.simya.BuildConfig
 import com.example.simya.R
-import com.example.simya.config.BaseFragment
-import com.example.simya.config.BaseResponse
 import com.example.simya.databinding.FragmentHomeMyPageBinding
-import com.example.simya.src.ui.view.home.HomeActivity
-import com.example.simya.src.ui.view.login.signIn.EmailLoginActivity
-import com.example.simya.util.data.UserData
-import com.example.simya.src.main.myPage.model.MyPageProfileInterface
-import com.example.simya.src.main.myPage.model.MyPageProfileService
 import com.example.simya.src.model.profile.ProfileDTO
-import com.example.simya.src.model.profile.ProfileResponse
-import com.example.simya.util.Constants.S3_URL
-import com.example.simya.util.SampleSnackBar
-import com.example.simya.util.dialog.DefaultDialog
-import com.example.simya.util.dialog.DefaultDialogInterface
 
 class MyPageFragment : BaseFragment<FragmentHomeMyPageBinding>(
     R.layout.fragment_home_my_page

@@ -3,7 +3,6 @@ package com.example.simya.src.ui.view.home
 import android.os.Bundle
 import android.view.View
 import com.example.simya.R
-import com.example.simya.config.BaseFragment
 import com.example.simya.databinding.FragmentHomeMainBinding
 
 class HomeMainFragment: BaseFragment<FragmentHomeMainBinding>(R.layout.fragment_home_main) {

@@ -1,41 +1,26 @@
 package com.example.simya.src.ui.view.login.signup.fragment
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.fragment.app.setFragmentResultListener
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.bumptech.glide.Glide
 import com.example.simya.R
-import com.example.simya.config.BaseFragment
 import com.example.simya.src.ui.view.login.signup.SignupActivity
 import com.example.simya.databinding.FragmentSignupProfileBinding
-import com.example.simya.src.main.login.model.SignUpInterface
-import com.example.simya.src.main.login.model.SignUpService
 import com.example.simya.src.model.account.*
 import com.example.simya.src.ui.view.gallery.GalleryActivity
 import com.example.simya.src.ui.viewmodel.login.signup.SignupViewModel
-import com.example.simya.util.Constants.COMMENT_VALIDATION
-import com.example.simya.util.Constants.ERROR_STRING_DUPLICATE
-import com.example.simya.util.Constants.ERROR_STRING_FAILED_SIGN_UP
-import com.example.simya.util.Constants.ERROR_STRING_INPUT
 import com.example.simya.util.Constants.IMAGE_PATH
 import com.example.simya.util.Constants.IMAGE_URI
-import com.example.simya.util.Constants.NICKNAME_VALIDATION
-import com.example.simya.util.Constants.POST_FAIL_USER
 import com.example.simya.util.Constants.REQUEST_CODE_FOR_INTENT
-import com.example.simya.util.Constants.REQUEST_ERROR
 import com.example.simya.util.SampleSnackBar
-import java.util.regex.Pattern
 
 class SignupProfileFragment : BaseFragment<FragmentSignupProfileBinding>(
     R.layout.fragment_signup_profile

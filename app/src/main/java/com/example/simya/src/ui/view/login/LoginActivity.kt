@@ -1,9 +1,7 @@
 package com.example.simya.src.ui.view.login
 
 import android.content.Intent
-import android.os.Bundle
 import com.example.simya.R
-import com.example.simya.config.BaseActivity
 import com.example.simya.src.ui.view.login.signIn.EmailLoginActivity
 import com.example.simya.databinding.ActivityLoginMainBinding
 import com.example.simya.src.ui.view.home.HomeActivity
