@@ -1,13 +1,9 @@
 package com.example.simya.src.ui.view.home
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.simya.R
-import com.example.simya.config.BaseFragment
 import com.example.simya.src.testData.TestDataBorder
 import com.example.simya.databinding.FragmentHomeMainRecyclerBinding
 import com.example.simya.src.ui.adapter.home.HomeRVAdapter

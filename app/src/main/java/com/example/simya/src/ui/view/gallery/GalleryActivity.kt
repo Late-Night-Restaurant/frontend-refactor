@@ -7,16 +7,13 @@ import android.database.Cursor
 import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Build
-import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.simya.R
-import com.example.simya.config.BaseActivity
 import com.example.simya.databinding.ActivityCropImageBinding
 import com.example.simya.util.Constants.IMAGE_PATH
 import com.example.simya.util.Constants.IMAGE_URI

@@ -1,21 +1,14 @@
 package com.example.simya.src.ui.view.login.signup.fragment
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import com.example.simya.R
-import com.example.simya.config.BaseFragment
-import com.example.simya.src.ui.view.login.signIn.EmailLoginActivity
 import com.example.simya.src.ui.view.login.signup.SignupActivity
 import com.example.simya.databinding.FragmentSignupAgreeBinding
 import com.example.simya.src.ui.viewmodel.login.signup.SignupViewModel
-import com.example.simya.util.dialog.AgreeDialogInterface
 
 
 class SignupAgreeFragment :

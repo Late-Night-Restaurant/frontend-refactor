@@ -1,11 +1,9 @@
 package com.example.simya.src.ui.view.login.signup.fragment
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.example.simya.R
-import com.example.simya.config.BaseFragment
 import com.example.simya.src.ui.view.login.signup.SignupActivity
 import com.example.simya.databinding.FragmentSignupFinBinding
 import com.example.simya.src.ui.viewmodel.login.signup.SignupViewModel

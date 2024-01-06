@@ -3,18 +3,10 @@ package com.example.simya.src.ui.view.story
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
 import com.example.simya.R
-import com.example.simya.config.BaseFragment
 import com.example.simya.databinding.FragmentHomeMyStoryMainBinding
-import com.example.simya.util.Constants.REQUEST_CODE_FOR_INTENT
-import com.example.simya.util.SampleSnackBar
 
 
 class MyStoryFragment: BaseFragment<FragmentHomeMyStoryMainBinding>(R.layout.fragment_home_my_story_main) {

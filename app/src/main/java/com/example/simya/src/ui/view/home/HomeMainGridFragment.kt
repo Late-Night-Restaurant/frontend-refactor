@@ -1,12 +1,10 @@
 package com.example.simya.src.ui.view.home
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.simya.R
-import com.example.simya.config.BaseFragment
 import com.example.simya.databinding.FragmentHomeMainGridBinding
 import com.example.simya.src.ui.adapter.home.HomeGVAdapter
 import com.example.simya.src.main.home.model.AllStoryInterface

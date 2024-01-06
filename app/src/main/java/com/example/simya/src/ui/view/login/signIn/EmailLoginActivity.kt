@@ -1,17 +1,13 @@
 package com.example.simya.src.ui.view.login.signIn
 
 import android.content.Intent
-import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.simya.R
-import com.example.simya.config.BaseActivity
 import com.example.simya.databinding.ActivitySigninEmailBinding
 import com.example.simya.src.ui.view.login.signup.SignupActivity
 import com.example.simya.src.ui.viewmodel.login.signin.EmailLoginViewModel
-import com.example.simya.util.dialog.PrepareDialogInterface
 import com.example.simya.util.onThrottleClick
-import com.example.simya.util.textwatcher.CommonTextWatcher
 
 
 class EmailLoginActivity :
